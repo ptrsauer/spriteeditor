@@ -8,6 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 @ContextConfiguration(loader = HeadlessSpringBootContextLoader.class)
 public class SpriteEditorApplicationTests {
 
+  @SuppressWarnings("EmptyMethod")
   @Test
   public void contextLoads() {
   }
