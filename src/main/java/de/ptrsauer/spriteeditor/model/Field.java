@@ -1,8 +1,11 @@
 package de.ptrsauer.spriteeditor.model;
 
+import lombok.ToString;
+
 import java.awt.*;
 
-class Field {
+@ToString
+public class Field {
 
   private final Dimension dimension;
 
@@ -14,7 +17,7 @@ class Field {
     this.colors = colors;
   }
 
-  static Field withDimension(Dimension dimension) {
+  public static Field withDimension(Dimension dimension) {
     return new Field(dimension, getTransparentColorArray(dimension));
   }
 

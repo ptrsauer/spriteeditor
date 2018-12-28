@@ -68,4 +68,17 @@ class FieldTest {
     // then
     assertThat(field.getColorFrom(0, 0)).isEqualTo(Color.BLACK);
   }
+
+  @Test
+  void field_has_meaningful_toString_method() {
+    // given
+    Dimension dimension = new Dimension(2, 2);
+    Field field = Field.withDimension(dimension);
+
+    // when
+    String actual = field.toString();
+
+    // then
+    assertThat(actual).isEqualTo("Field(dimension=java.awt.Dimension[width=2,height=2], colors=[[java.awt.Color[r=0,g=0,b=0], java.awt.Color[r=0,g=0,b=0]], [java.awt.Color[r=0,g=0,b=0], java.awt.Color[r=0,g=0,b=0]]])");
+  }
 }
